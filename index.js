@@ -10,7 +10,8 @@
   btn.onclick = function() {
     return html2canvas(showPictureWrap, {
       onrendered: function(canvas) {
-        return location.href = canvas.toDataURL();
+        html.className = "save";
+        return showPicture.src = canvas.toDataURL();
       }
     });
   };
