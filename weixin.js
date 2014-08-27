@@ -2,10 +2,11 @@
 (function() {
   var onBridgeReady;
   onBridgeReady = function() {
+    var img, url;
+    url = location.href;
+    img = "" + url + "/god.jpg";
     WeixinJSBridge.on("menu:share:timeline", function(e) {
-      var data, img, url;
-      url = location.href;
-      img = "" + url + "/god.jpg";
+      var data;
       data = {
         img_url: img,
         img_width: "120",
@@ -19,8 +20,6 @@
       });
     });
     return WeixinJSBridge.on("menu:share:appmessage", function(argv) {
-      var url;
-      url = location.href;
       return WeixinJSBridge.invoke("sendAppMessage", {
         img_url: img,
         img_width: "120",

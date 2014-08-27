@@ -1,10 +1,12 @@
 (->
   onBridgeReady = ->
+
+    url = location.href
+    img = "#{url}/god.jpg"
   
     #转发朋友圈
     WeixinJSBridge.on "menu:share:timeline", (e) ->
-      url = location.href
-      img = "#{url}/god.jpg"
+      
       data =
         img_url: img
         img_width: "120"
@@ -22,12 +24,13 @@
     
     #分享给朋友
     WeixinJSBridge.on "menu:share:appmessage", (argv) ->
-      url = location.href
+
       WeixinJSBridge.invoke "sendAppMessage",
         img_url: img
         img_width: "120"
         img_height: "120"
         link: url
+
         desc: "新头像，我骄傲，你也来做个吧！"
         title: "我做了个新头像，邀请你一起玩坏处女座！"
       , (res) ->

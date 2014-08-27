@@ -38,10 +38,9 @@ body{
   }
 
   &.save{
-    #show-picture{
-      display: block;
-    }
-    .btn.save{
+    #show-picture,
+    .btn.save,
+    .share{
       display: block;
     }
 
@@ -147,5 +146,9 @@ body{
   &:active{
     background-color: darken(red, 4%);
   }
+}
+
+.share{
+  display: none;
 }
 
