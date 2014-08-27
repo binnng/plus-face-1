@@ -31,8 +31,7 @@
           URL = window.URL || window.webkitURL;
           imgURL = URL.createObjectURL(file);
           showPicture.src = imgURL;
-          html.className = "show";
-          return URL.revokeObjectURL(imgURL);
+          return html.className = "show";
         } catch (_error) {
           e = _error;
           try {

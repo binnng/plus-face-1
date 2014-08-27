@@ -1,0 +1,14 @@
+div#html
+	p.title 朋友圈丧心病狂，<br>你也给自己做个新头像吧！
+
+	p.tip 选择头像后，数字可以输入哦～
+
+	input#take-picture(type="file",accept="image/*")
+
+	#show-picture-wrap
+		canvas#canvas
+		img#show-picture(src="about:blank",alt="")
+		.plus(contentEditable="true") 1
+
+	b.btn 生成头像
+	b.btn.save 长按图片保存 @imbinnng
